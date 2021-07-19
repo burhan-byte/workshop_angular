@@ -1,10 +1,17 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+import { StockCreateComponent } from './stock/stock-create/stock-create.component';
+import { StockEditComponent } from './stock/stock-edit/stock-edit.component';
+import { StockHomeComponent } from './stock/stock-home/stock-home.component';
 
-const routes: Routes = [];
+const routes: Routes = [
+  { path: 'stock', component: StockHomeComponent },
+  { path: 'stock/create', component: StockCreateComponent },
+  { path: 'stock/edit', component: StockEditComponent },
+];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}
